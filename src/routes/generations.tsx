@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { img, onImgError } from "../lib/site-images";
-import { BackButton } from "../components/BackButton";
 import { AnimatedCounter } from "../components/AnimatedCounter";
 import { GEN_MEMBER_COUNTS } from "../lib/site-config";
 import { useI18n } from "../lib/i18n";
@@ -34,7 +33,6 @@ function GenPage() {
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-12">
-      <BackButton />
       <h1 className="font-display text-3xl font-bold tracking-tight md:text-4xl">{t.gens.title}</h1>
       <p className="mt-2 text-muted-foreground">{t.gens.desc}</p>
 
