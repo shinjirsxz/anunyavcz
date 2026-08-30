@@ -11,7 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { FAVICON_URL } from "../lib/site-config";
+import { FAVICON_URL, OG_IMAGE_URL } from "../lib/site-config";
 import { NavBar } from "../components/NavBar";
 import { LanguageProvider } from "../lib/i18n";
 
@@ -87,10 +87,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:title", content: "Five Fail Family" },
       { property: "og:description", content: "Marga editor & kreator anime di TikTok." },
-      { property: "og:image", content: FAVICON_URL },
+      { property: "og:image", content: OG_IMAGE_URL },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:image", content: FAVICON_URL },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: OG_IMAGE_URL },
       { name: "theme-color", content: "#ffffff" },
     ],
     links: [
