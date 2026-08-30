@@ -71,7 +71,11 @@ function useSessionUptime() {
   const h = Math.floor((sec % 86400) / 3600);
   const m = Math.floor((sec % 3600) / 60);
   const s = sec % 60;
-  return `${d}d ${pad(h)}h ${pad(m)}m ${pad(s)}s`;
+  const parts = [`${d}d`];
+  if (h > 0) parts.push(`${pad(h)}h`);
+  parts.push(`${pad(m)}m`);
+  parts.push(`${pad(s)}s`);
+  return parts.join(" ");
 }
 
 function MetricCard({
