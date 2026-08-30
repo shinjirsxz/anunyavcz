@@ -60,8 +60,12 @@ function formatDuration(totalSeconds: number) {
   const h = Math.floor((totalSeconds % 86400) / 3600);
   const m = Math.floor((totalSeconds % 3600) / 60);
   const s = Math.floor(totalSeconds % 60);
-  if (d > 0) return `${d}d ${String(h).padStart(2, "0")}h ${String(m).padStart(2, "0")}m`;
-  return `${String(h).padStart(2, "0")}h ${String(m).padStart(2, "0")}m ${String(s).padStart(2, "0")}s`;
+  const parts: string[] = [];
+  if (d > 0) parts.push(`${d}d`);
+  if (h > 0) parts.push(`${String(h).padStart(2, "0")}h`);
+  parts.push(`${String(m).padStart(2, "0")}m`);
+  if (d === 0) parts.push(`${String(s).padStart(2, "0")}s`);
+  return parts.join(" ");
 }
 
 function useElapsedSeconds(initial = 0) {
