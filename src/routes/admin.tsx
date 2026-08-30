@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Crown, Users, BadgeCheck, Layers } from "lucide-react";
 import { img, onImgError } from "../lib/site-images";
-import { BackButton } from "../components/BackButton";
 import { AnimatedCounter } from "../components/AnimatedCounter";
 
 export const Route = createFileRoute("/admin")({
@@ -72,10 +71,6 @@ function AdminPage() {
 
   return (
     <main className="mx-auto max-w-6xl px-4 pb-20">
-      <div className="pt-8">
-        <BackButton />
-      </div>
-
       {/* ── Hero — tanpa logo ─────────────────────────────────── */}
       <section className="mx-auto max-w-3xl pt-6 text-center">
         <span className="chip">
