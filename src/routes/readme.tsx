@@ -14,7 +14,6 @@ import {
   ScrollText,
   ArrowRight,
 } from "lucide-react";
-import { BackButton } from "../components/BackButton";
 import { useI18n } from "../lib/i18n";
 
 export const Route = createFileRoute("/readme")({
@@ -45,10 +44,6 @@ function ReadmePage() {
 
   return (
     <main className="relative min-h-[calc(100vh-64px)] overflow-hidden px-4 pb-20">
-      <div className="mx-auto max-w-3xl pt-8">
-        <BackButton />
-      </div>
-
       {/* ── Hero ───────────────────────────────────────────────── */}
       <section className="mx-auto max-w-3xl pt-4 text-center">
 
