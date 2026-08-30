@@ -49,7 +49,7 @@ function detectPlatform(): { name: string; region: string; runtime: string } {
       return { name: "Fly.io", region: process.env.FLY_REGION ?? "Auto", runtime: "Node.js" };
     }
   }
-  return { name: "Vercel", region: "Lad1", runtime: "Node.js" };
+  return { name: "Vercel", region: "lad1", runtime: "Node.js" };
 }
 
 const PLATFORM = detectPlatform();
