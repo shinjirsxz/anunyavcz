@@ -9,9 +9,9 @@ export const WA_URL_SELECTION = "https://chat.whatsapp.com/J5NHH868UBZAtmSfPUeNS
 export const WA_URL_DIRECT = "https://chat.whatsapp.com/JqBKCwH0LAtJdzFvYf9kEe";
 
 export const GEN_MEMBER_COUNTS = [
-  { gen: "Gen 1", count: 322 },
-  { gen: "Gen 2", count: 74 },
-  { gen: "Gen 3", count: 12 },
+  { gen: "Gen 1", count: 334 },
+  { gen: "Gen 2", count: 81 },
+  { gen: "Gen 3", count: 42 },
 ];
 
 export const GEN_FOLLOWER_REQUIREMENTS = [
